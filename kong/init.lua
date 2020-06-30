@@ -762,7 +762,7 @@ do
     local buffered_proxying = kong.ctx.core.buffered_proxying
     if not buffered_proxying then
       for plugin in plugins_iterator:iterate("response", ctx) do
-        if plugin.handler.response then
+        if plugin.handler.response and plugin.handler._go then
           buffered_proxying = true
           break
         end
