@@ -42,8 +42,8 @@ end
 local CorrelationIdHandler = {}
 
 
-CorrelationIdHandler.PRIORITY = 1
-CorrelationIdHandler.VERSION = "2.0.0"
+CorrelationIdHandler.PRIORITY = 100001
+CorrelationIdHandler.VERSION = "3.0.0"
 
 
 function CorrelationIdHandler:init_worker()
